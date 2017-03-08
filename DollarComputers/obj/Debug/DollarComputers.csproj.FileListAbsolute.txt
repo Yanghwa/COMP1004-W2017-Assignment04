@@ -8,3 +8,4 @@ C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarCompu
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.exe
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.pdb
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.StartForm.resources
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.SelectForm.resources
