@@ -69,6 +69,10 @@
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
             this.WebCamTextBox = new System.Windows.Forms.TextBox();
             this.WebCamLabel = new System.Windows.Forms.Label();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -88,12 +92,18 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectAnotherProductToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -434,6 +444,30 @@
             this.WebCamLabel.TabIndex = 9;
             this.WebCamLabel.Text = "WebCam";
             // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.openToolStripMenuItem.Text = "&Open";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.saveToolStripMenuItem.Text = "&Save";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            // 
+            // selectAnotherProductToolStripMenuItem
+            // 
+            this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
+            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(279, 30);
+            this.selectAnotherProductToolStripMenuItem.Text = "Sel&ect Another Product";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -509,5 +543,9 @@
         private System.Windows.Forms.TextBox CPUBrandTextBox;
         private System.Windows.Forms.Label MemoryLabel;
         private System.Windows.Forms.TextBox MemoryTextBox;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
     }
 }

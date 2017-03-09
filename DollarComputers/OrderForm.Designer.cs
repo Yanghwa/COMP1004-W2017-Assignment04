@@ -69,9 +69,18 @@
             this.SalesTaxLabel = new System.Windows.Forms.Label();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.TotalLabel = new System.Windows.Forms.Label();
+            this.OrderFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.YourPriceGroupBox.SuspendLayout();
             this.SystemComponentsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).BeginInit();
+            this.OrderFormMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackButton
@@ -442,6 +451,68 @@
             this.TotalLabel.TabIndex = 40;
             this.TotalLabel.Text = "Total";
             // 
+            // OrderFormMenuStrip
+            // 
+            this.OrderFormMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.OrderFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.OrderFormMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.OrderFormMenuStrip.Name = "OrderFormMenuStrip";
+            this.OrderFormMenuStrip.Size = new System.Drawing.Size(804, 33);
+            this.OrderFormMenuStrip.TabIndex = 12;
+            this.OrderFormMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.aboutToolStripMenuItem.Text = "&About";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.backToolStripMenuItem.Text = "&Back";
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printToolStripMenuItem.Text = "&Print";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -453,6 +524,8 @@
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.OrderFormMenuStrip);
+            this.MainMenuStrip = this.OrderFormMenuStrip;
             this.Name = "OrderForm";
             this.Text = "OrderForm";
             this.YourPriceGroupBox.ResumeLayout(false);
@@ -460,7 +533,10 @@
             this.SystemComponentsGroupBox.ResumeLayout(false);
             this.SystemComponentsGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).EndInit();
+            this.OrderFormMenuStrip.ResumeLayout(false);
+            this.OrderFormMenuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -507,5 +583,13 @@
         private System.Windows.Forms.TextBox SalesTaxTextBox;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.MenuStrip OrderFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
