@@ -16,5 +16,12 @@ namespace DollarComputers
         {
             InitializeComponent();
         }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            OrderForm order = new OrderForm();
+            this.Hide();
+            order.Show();
+        }
     }
 }
