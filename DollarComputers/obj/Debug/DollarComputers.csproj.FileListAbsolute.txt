@@ -11,3 +11,7 @@ C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarCompu
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.SelectForm.resources
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.OrderForm.resources
 C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\obj\Debug\DollarComputers.ProductInfoForm.resources
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\bin\Debug\EntityFramework.dll
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\bin\Debug\EntityFramework.xml
+C:\Users\Junghwan Yang\Desktop\COMP1004-Assignment04\DollarComputers\DollarComputers\bin\Debug\EntityFramework.SqlServer.xml

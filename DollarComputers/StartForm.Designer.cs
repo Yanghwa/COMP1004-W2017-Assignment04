@@ -32,8 +32,8 @@
             this.StartNewOrderButton = new System.Windows.Forms.Button();
             this.LoadSavedOrderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.DollorComputersPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DollorComputersPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -77,20 +77,22 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // pictureBox1
+            // DollorComputersPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(155, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 195);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.DollorComputersPictureBox.Image = global::DollarComputers.Properties.Resources.laptopImage;
+            this.DollorComputersPictureBox.Location = new System.Drawing.Point(155, 70);
+            this.DollorComputersPictureBox.Name = "DollorComputersPictureBox";
+            this.DollorComputersPictureBox.Size = new System.Drawing.Size(260, 195);
+            this.DollorComputersPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DollorComputersPictureBox.TabIndex = 4;
+            this.DollorComputersPictureBox.TabStop = false;
             // 
             // StartForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(583, 464);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.DollorComputersPictureBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.LoadSavedOrderButton);
             this.Controls.Add(this.StartNewOrderButton);
@@ -103,7 +105,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Dollar Computers!";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DollorComputersPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,6 +116,6 @@
         private System.Windows.Forms.Button StartNewOrderButton;
         private System.Windows.Forms.Button LoadSavedOrderButton;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox DollorComputersPictureBox;
     }
 }

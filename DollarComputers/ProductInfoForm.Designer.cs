@@ -115,8 +115,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -130,7 +131,8 @@
             // 
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(279, 30);
-            this.selectAnotherProductToolStripMenuItem.Text = "Sel&ect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
             // NextButton
             // 
@@ -150,6 +152,7 @@
             this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // SelectAnotherProductButton
             // 
@@ -159,6 +162,7 @@
             this.SelectAnotherProductButton.TabIndex = 7;
             this.SelectAnotherProductButton.Text = "Select Another Product";
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
+            this.SelectAnotherProductButton.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
             // ConfirmLabel
             // 
@@ -471,9 +475,9 @@
             // 
             // ProductInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(762, 570);
+            this.ControlBox = false;
             this.Controls.Add(this.TechSpecsGroupBox);
             this.Controls.Add(this.ProductInfoGroupBox);
             this.Controls.Add(this.CostTextBox);
@@ -489,6 +493,7 @@
             this.Controls.Add(this.ProductFormMenuStrip);
             this.MainMenuStrip = this.ProductFormMenuStrip;
             this.Name = "ProductInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfoForm";
             this.ProductFormMenuStrip.ResumeLayout(false);
             this.ProductFormMenuStrip.PerformLayout();
