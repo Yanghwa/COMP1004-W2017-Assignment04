@@ -51,6 +51,8 @@
             this.ComputersDataGridView.AllowUserToAddRows = false;
             this.ComputersDataGridView.AllowUserToDeleteRows = false;
             this.ComputersDataGridView.AllowUserToOrderColumns = true;
+            this.ComputersDataGridView.AllowUserToResizeColumns = false;
+            this.ComputersDataGridView.AllowUserToResizeRows = false;
             this.ComputersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ComputersDataGridView.Location = new System.Drawing.Point(31, 66);
             this.ComputersDataGridView.MultiSelect = false;
@@ -61,7 +63,7 @@
             this.ComputersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ComputersDataGridView.Size = new System.Drawing.Size(800, 500);
             this.ComputersDataGridView.TabIndex = 1;
-            this.ComputersDataGridView.SelectionChanged += new System.EventHandler(this.ComputersDataGridView_SelectionChanged);
+            this.ComputersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ComputersDataGridView_CellClick);
             // 
             // YourSelectionLabel
             // 

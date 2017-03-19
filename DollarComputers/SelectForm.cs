@@ -25,9 +25,10 @@ namespace DollarComputers
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
             //select all the products in the products table of Computer DB
-            
+            ComputersDataGridView.ClearSelection();
             try
             {
+                
                 var ComputersList = (from product in ComputerDB.products
                                      select product).ToList();
                 var SingleComputer = (from product in ComputerDB.products
@@ -37,7 +38,7 @@ namespace DollarComputers
                 //foreach (var product in ComputersList)
                 //{
                 //    Console.WriteLine(product.model);
-               // }
+                // }
                 //var SingleComputer = (from product in ComputerDB.products
                 //                      where product.OS == "OSX"
                 //                      select product).FirstOrDefault();
@@ -47,7 +48,8 @@ namespace DollarComputers
             {
                 Console.WriteLine(exception.Message);
             }
-            
+            ComputersDataGridView.ClearSelection();
+            ComputersDataGridView.CurrentRow.Selected = false;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -62,34 +64,19 @@ namespace DollarComputers
             productInfo.previousForm = this;
             productInfo.Show();
         }
-
-        private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
+        
+        private void ComputersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             foreach (DataGridViewRow row in ComputersDataGridView.SelectedRows)
             {
                 string manufacturer = row.Cells[2].Value.ToString();
                 string model = row.Cells[3].Value.ToString();
                 string cost = row.Cells[1].Value.ToString();
-                YourSelectionTextBox.Text = manufacturer + ", " + model +", $" + cost;
+                YourSelectionTextBox.Text = manufacturer + ", " + model + ", $" + cost;
             }
             _selectedRow = ComputersDataGridView.SelectedRows;
             NextButton.Enabled = true;
             Console.WriteLine(_selectedRow[0].Cells[0].Value.ToString());
-            //int rowindex = ComputersDataGridView.CurrentRow.Index;
-            //int currentId = (int)ComputersDataGridView.Rows[rowindex].Cells[0].Value;
-            //Console.WriteLine(currentId);
-            //try
-            //{
-            //   var SelectedName = (from model in ComputerDB.products
-            //                       where model.productID == currentId
-            //                      select model);
-
-            //}
-            // catch (Exception exception)
-            //            {
-
-            //          }
         }
     }
 }
