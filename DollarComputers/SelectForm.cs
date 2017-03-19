@@ -13,8 +13,18 @@ namespace DollarComputers
     
     public partial class SelectForm : Form
     {
-        private DataGridViewSelectedRowCollection _selectedRow;
+        
         ComputersContext ComputerDB = new ComputersContext();
+
+        private DataGridViewSelectedRowCollection _selectedRow;
+
+        public DataGridViewSelectedRowCollection SelectedRow
+        {
+            get
+            {
+                return _selectedRow;
+            }
+        }
         public SelectForm()
         {
             InitializeComponent();
@@ -62,6 +72,7 @@ namespace DollarComputers
             ProductInfoForm productInfo = new ProductInfoForm();
             this.Hide();
             productInfo.previousForm = this;
+            productInfo.BringDataFromSelectForm();
             productInfo.Show();
         }
         

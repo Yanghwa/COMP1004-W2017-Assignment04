@@ -98,6 +98,7 @@
             this.Controls.Add(this.StartNewOrderButton);
             this.Controls.Add(this.WelcomeLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StartForm";

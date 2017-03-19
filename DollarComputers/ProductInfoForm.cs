@@ -13,6 +13,14 @@ namespace DollarComputers
     public partial class ProductInfoForm : Form
     {
         public SelectForm previousForm;
+        private DataGridViewSelectedRowCollection _selectedRowData;
+        public DataGridViewSelectedRowCollection SelectedRowData
+        {
+            get
+            {
+                return _selectedRowData;
+            }
+        }
         public ProductInfoForm()
         {
             InitializeComponent();
@@ -22,6 +30,8 @@ namespace DollarComputers
         {
             OrderForm order = new OrderForm();
             this.Hide();
+            order.previousForm = this;
+            order.BringDataFromProductInfoForm();
             order.Show();
         }
 
@@ -34,6 +44,27 @@ namespace DollarComputers
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public void BringDataFromSelectForm()
+        {
+            _selectedRowData = previousForm.SelectedRow;
+            ProductIDTextBox.Text = _selectedRowData[0].Cells[0].Value.ToString();
+            CostTextBox.Text = _selectedRowData[0].Cells[1].Value.ToString();
+            ManufacturerTextBox.Text = _selectedRowData[0].Cells[2].Value.ToString();
+            ModelTextBox.Text = _selectedRowData[0].Cells[3].Value.ToString();
+            MemoryTextBox.Text = _selectedRowData[0].Cells[5].Value.ToString();
+            LCDSizeTextBox.Text = _selectedRowData[0].Cells[7].Value.ToString();
+            CPUBrandTextBox.Text = _selectedRowData[0].Cells[10].Value.ToString();
+            CPUTypeTextBox.Text = _selectedRowData[0].Cells[11].Value.ToString();
+            CPUSpeedTextBox.Text = _selectedRowData[0].Cells[12].Value.ToString();
+            CPUNumberTextBox.Text = _selectedRowData[0].Cells[13].Value.ToString();
+            ConditionTextBox.Text = _selectedRowData[0].Cells[14].Value.ToString();
+            OSTextBox.Text = _selectedRowData[0].Cells[15].Value.ToString();
+            PlatformTextBox.Text = _selectedRowData[0].Cells[16].Value.ToString();
+            HDDTextBox.Text = _selectedRowData[0].Cells[17].Value.ToString();
+            GPUTypeTextBox.Text = _selectedRowData[0].Cells[19].Value.ToString();
+            WebCamTextBox.Text = _selectedRowData[0].Cells[30].Value.ToString();
         }
     }
 }

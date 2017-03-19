@@ -115,6 +115,9 @@
             this.Controls.Add(this.YourSelectionLabel);
             this.Controls.Add(this.ComputersDataGridView);
             this.Controls.Add(this.DollarComputersListLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectForm";
