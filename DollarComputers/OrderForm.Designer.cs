@@ -141,6 +141,7 @@
             // 
             this.TotalTextBox.Location = new System.Drawing.Point(179, 173);
             this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(100, 26);
             this.TotalTextBox.TabIndex = 41;
             // 
@@ -157,6 +158,7 @@
             // 
             this.SalesTaxTextBox.Location = new System.Drawing.Point(179, 97);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
+            this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 26);
             this.SalesTaxTextBox.TabIndex = 41;
             // 
@@ -173,6 +175,7 @@
             // 
             this.PriceTextBox.Location = new System.Drawing.Point(179, 52);
             this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.ReadOnly = true;
             this.PriceTextBox.Size = new System.Drawing.Size(100, 26);
             this.PriceTextBox.TabIndex = 41;
             // 
@@ -251,6 +254,7 @@
             // 
             this.WebCamTextBox.Location = new System.Drawing.Point(126, 485);
             this.WebCamTextBox.Name = "WebCamTextBox";
+            this.WebCamTextBox.ReadOnly = true;
             this.WebCamTextBox.Size = new System.Drawing.Size(234, 26);
             this.WebCamTextBox.TabIndex = 36;
             // 
@@ -267,6 +271,7 @@
             // 
             this.GPUTypeTextBox.Location = new System.Drawing.Point(125, 437);
             this.GPUTypeTextBox.Name = "GPUTypeTextBox";
+            this.GPUTypeTextBox.ReadOnly = true;
             this.GPUTypeTextBox.Size = new System.Drawing.Size(235, 26);
             this.GPUTypeTextBox.TabIndex = 34;
             // 
@@ -283,6 +288,7 @@
             // 
             this.HDDTextBox.Location = new System.Drawing.Point(125, 399);
             this.HDDTextBox.Name = "HDDTextBox";
+            this.HDDTextBox.ReadOnly = true;
             this.HDDTextBox.Size = new System.Drawing.Size(235, 26);
             this.HDDTextBox.TabIndex = 32;
             // 
@@ -299,6 +305,7 @@
             // 
             this.CPUSpeedTextBox.Location = new System.Drawing.Point(125, 354);
             this.CPUSpeedTextBox.Name = "CPUSpeedTextBox";
+            this.CPUSpeedTextBox.ReadOnly = true;
             this.CPUSpeedTextBox.Size = new System.Drawing.Size(235, 26);
             this.CPUSpeedTextBox.TabIndex = 30;
             // 
@@ -315,6 +322,7 @@
             // 
             this.CPUNumberTextBox.Location = new System.Drawing.Point(126, 311);
             this.CPUNumberTextBox.Name = "CPUNumberTextBox";
+            this.CPUNumberTextBox.ReadOnly = true;
             this.CPUNumberTextBox.Size = new System.Drawing.Size(234, 26);
             this.CPUNumberTextBox.TabIndex = 28;
             // 
@@ -331,6 +339,7 @@
             // 
             this.CPUTypeTextBox.Location = new System.Drawing.Point(125, 274);
             this.CPUTypeTextBox.Name = "CPUTypeTextBox";
+            this.CPUTypeTextBox.ReadOnly = true;
             this.CPUTypeTextBox.Size = new System.Drawing.Size(235, 26);
             this.CPUTypeTextBox.TabIndex = 26;
             // 
@@ -347,6 +356,7 @@
             // 
             this.CPUBrandTextBox.Location = new System.Drawing.Point(125, 235);
             this.CPUBrandTextBox.Name = "CPUBrandTextBox";
+            this.CPUBrandTextBox.ReadOnly = true;
             this.CPUBrandTextBox.Size = new System.Drawing.Size(235, 26);
             this.CPUBrandTextBox.TabIndex = 24;
             // 
@@ -363,6 +373,7 @@
             // 
             this.MemoryTextBox.Location = new System.Drawing.Point(125, 197);
             this.MemoryTextBox.Name = "MemoryTextBox";
+            this.MemoryTextBox.ReadOnly = true;
             this.MemoryTextBox.Size = new System.Drawing.Size(235, 26);
             this.MemoryTextBox.TabIndex = 22;
             // 
@@ -379,6 +390,7 @@
             // 
             this.LCDSizeTextBox.Location = new System.Drawing.Point(125, 153);
             this.LCDSizeTextBox.Name = "LCDSizeTextBox";
+            this.LCDSizeTextBox.ReadOnly = true;
             this.LCDSizeTextBox.Size = new System.Drawing.Size(235, 26);
             this.LCDSizeTextBox.TabIndex = 20;
             // 
@@ -395,6 +407,7 @@
             // 
             this.ModelTextBox.Location = new System.Drawing.Point(294, 82);
             this.ModelTextBox.Name = "ModelTextBox";
+            this.ModelTextBox.ReadOnly = true;
             this.ModelTextBox.Size = new System.Drawing.Size(100, 26);
             this.ModelTextBox.TabIndex = 18;
             // 
@@ -411,6 +424,7 @@
             // 
             this.ManufacturerTextBox.Location = new System.Drawing.Point(114, 79);
             this.ManufacturerTextBox.Name = "ManufacturerTextBox";
+            this.ManufacturerTextBox.ReadOnly = true;
             this.ManufacturerTextBox.Size = new System.Drawing.Size(100, 26);
             this.ManufacturerTextBox.TabIndex = 16;
             // 
@@ -427,6 +441,7 @@
             // 
             this.PlatformTextBox.Location = new System.Drawing.Point(294, 41);
             this.PlatformTextBox.Name = "PlatformTextBox";
+            this.PlatformTextBox.ReadOnly = true;
             this.PlatformTextBox.Size = new System.Drawing.Size(100, 26);
             this.PlatformTextBox.TabIndex = 14;
             // 
@@ -434,6 +449,7 @@
             // 
             this.ConditionTextBox.Location = new System.Drawing.Point(114, 41);
             this.ConditionTextBox.Name = "ConditionTextBox";
+            this.ConditionTextBox.ReadOnly = true;
             this.ConditionTextBox.Size = new System.Drawing.Size(100, 26);
             this.ConditionTextBox.TabIndex = 12;
             // 
@@ -473,7 +489,7 @@
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -481,7 +497,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -498,7 +514,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
@@ -515,7 +531,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 

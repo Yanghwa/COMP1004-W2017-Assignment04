@@ -13,7 +13,7 @@ namespace DollarComputers
     public partial class OrderForm : Form
     {
         public ProductInfoForm previousForm;
-        private DataGridViewRow _selectedRowData;
+        private product _selectedRowData;
         public OrderForm()
         {
             InitializeComponent();
@@ -27,29 +27,29 @@ namespace DollarComputers
         public void BringDataFromProductInfoForm()
         {
             _selectedRowData = previousForm.SelectedRowData;
-            PriceTextBox.Text = _selectedRowData.Cells[1].Value.ToString();
-            ManufacturerTextBox.Text = _selectedRowData.Cells[2].Value.ToString();
-            ModelTextBox.Text = _selectedRowData.Cells[3].Value.ToString();
-            MemoryTextBox.Text = _selectedRowData.Cells[5].Value.ToString();
-            LCDSizeTextBox.Text = _selectedRowData.Cells[7].Value.ToString();
-            CPUBrandTextBox.Text = _selectedRowData.Cells[10].Value.ToString();
-            CPUTypeTextBox.Text = _selectedRowData.Cells[11].Value.ToString();
-            CPUSpeedTextBox.Text = _selectedRowData.Cells[12].Value.ToString();
-            CPUNumberTextBox.Text = _selectedRowData.Cells[13].Value.ToString();
-            ConditionTextBox.Text = _selectedRowData.Cells[14].Value.ToString();
-            OSTextBox.Text = _selectedRowData.Cells[15].Value.ToString();
-            PlatformTextBox.Text = _selectedRowData.Cells[16].Value.ToString();
-            HDDTextBox.Text = _selectedRowData.Cells[17].Value.ToString();
-            GPUTypeTextBox.Text = _selectedRowData.Cells[19].Value.ToString();
-            WebCamTextBox.Text = _selectedRowData.Cells[30].Value.ToString();
+            PriceTextBox.Text = _selectedRowData.cost.ToString();
+            ManufacturerTextBox.Text = _selectedRowData.manufacturer.ToString();
+            ModelTextBox.Text = _selectedRowData.model.ToString();
+            MemoryTextBox.Text = _selectedRowData.RAM_size.ToString();
+            LCDSizeTextBox.Text = _selectedRowData.screensize.ToString();
+            CPUBrandTextBox.Text = _selectedRowData.CPU_brand.ToString();
+            CPUTypeTextBox.Text = _selectedRowData.CPU_type.ToString();
+            CPUSpeedTextBox.Text = _selectedRowData.CPU_speed.ToString();
+            CPUNumberTextBox.Text = _selectedRowData.CPU_number.ToString();
+            ConditionTextBox.Text = _selectedRowData.condition.ToString();
+            OSTextBox.Text = _selectedRowData.OS.ToString();
+            PlatformTextBox.Text = _selectedRowData.platform.ToString();
+            HDDTextBox.Text = _selectedRowData.HDD_size.ToString();
+            GPUTypeTextBox.Text = _selectedRowData.GPU_Type.ToString();
+            WebCamTextBox.Text = _selectedRowData.webcam.ToString();
             CalculateTotalPrice();
         }
 
         private void CalculateTotalPrice()
         {
-            double price = double.Parse(_selectedRowData.Cells[1].Value.ToString());
-            double salesTax = price * 0.13;
-            double total = price + salesTax;
+            decimal price = (decimal)_selectedRowData.cost;
+            decimal salesTax = price * (decimal)0.13;
+            decimal total = price + salesTax;
             SalesTaxTextBox.Text = salesTax.ToString();
             TotalTextBox.Text = total.ToString();
         }
