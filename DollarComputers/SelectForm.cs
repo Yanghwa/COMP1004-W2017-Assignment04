@@ -16,9 +16,9 @@ namespace DollarComputers
         
         ComputersContext ComputerDB = new ComputersContext();
 
-        private DataGridViewSelectedRowCollection _selectedRow;
+        private DataGridViewRow _selectedRow;
 
-        public DataGridViewSelectedRowCollection SelectedRow
+        public DataGridViewRow SelectedRow
         {
             get
             {
@@ -35,7 +35,7 @@ namespace DollarComputers
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
             //select all the products in the products table of Computer DB
-            ComputersDataGridView.ClearSelection();
+            
             try
             {
                 
@@ -44,22 +44,14 @@ namespace DollarComputers
                 var SingleComputer = (from product in ComputerDB.products
                                       select product).FirstOrDefault();
                 ComputersDataGridView.DataSource = ComputersList;
+                ComputersDataGridView.ClearSelection();
                 
-                //foreach (var product in ComputersList)
-                //{
-                //    Console.WriteLine(product.model);
-                // }
-                //var SingleComputer = (from product in ComputerDB.products
-                //                      where product.OS == "OSX"
-                //                      select product).FirstOrDefault();
-                //Console.WriteLine(SingleComputer.model);
             } 
             catch ( Exception exception)
             {
                 Console.WriteLine(exception.Message);
             }
-            ComputersDataGridView.ClearSelection();
-            ComputersDataGridView.CurrentRow.Selected = false;
+            InitializeSelection();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -76,8 +68,9 @@ namespace DollarComputers
             productInfo.Show();
         }
         
-        private void ComputersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            
             foreach (DataGridViewRow row in ComputersDataGridView.SelectedRows)
             {
                 string manufacturer = row.Cells[2].Value.ToString();
@@ -85,9 +78,15 @@ namespace DollarComputers
                 string cost = row.Cells[1].Value.ToString();
                 YourSelectionTextBox.Text = manufacturer + ", " + model + ", $" + cost;
             }
-            _selectedRow = ComputersDataGridView.SelectedRows;
+            _selectedRow = ComputersDataGridView.SelectedRows[0];
             NextButton.Enabled = true;
-            Console.WriteLine(_selectedRow[0].Cells[0].Value.ToString());
+        }
+
+        private void InitializeSelection()
+        {
+            _selectedRow = new DataGridViewRow();
+            NextButton.Enabled = false;
+            YourSelectionTextBox.Text = "";
         }
     }
 }

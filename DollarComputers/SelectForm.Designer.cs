@@ -63,7 +63,7 @@
             this.ComputersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ComputersDataGridView.Size = new System.Drawing.Size(800, 500);
             this.ComputersDataGridView.TabIndex = 1;
-            this.ComputersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ComputersDataGridView_CellClick);
+            this.ComputersDataGridView.SelectionChanged += new System.EventHandler(this.ComputersDataGridView_SelectionChanged);
             // 
             // YourSelectionLabel
             // 
