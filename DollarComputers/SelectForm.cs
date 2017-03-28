@@ -16,9 +16,9 @@ namespace DollarComputers
         
         ComputersContext ComputerDB = new ComputersContext();
 
-        private product _selectedRow;
+        private Product _selectedRow;
 
-        public product SelectedRow
+        public Product SelectedRow
         {
             get
             {
@@ -64,7 +64,8 @@ namespace DollarComputers
             ProductInfoForm productInfo = new ProductInfoForm();
             this.Hide();
             productInfo.previousForm = this;
-            productInfo.BringDataFromSelectForm();
+            productInfo.SelectedRowData = this.SelectedRow;
+            productInfo.SettingTextFromData();
             productInfo.Show();
         }
         
@@ -78,13 +79,13 @@ namespace DollarComputers
                 string cost = row.Cells[1].Value.ToString();
                 YourSelectionTextBox.Text = manufacturer + ", " + model + ", $" + cost;
             }
-            _selectedRow = (product)ComputersDataGridView.CurrentRow.DataBoundItem;
+            _selectedRow = (Product)ComputersDataGridView.CurrentRow.DataBoundItem;
             NextButton.Enabled = true;
         }
 
         private void InitializeSelection()
         {
-            _selectedRow = new product();
+            _selectedRow = new Product();
             NextButton.Enabled = false;
             YourSelectionTextBox.Text = "";
         }

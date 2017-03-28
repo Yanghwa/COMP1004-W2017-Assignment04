@@ -5,8 +5,12 @@ namespace DollarComputers
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Runtime.Serialization;
+    using System.IO;
+    using System.Runtime.Serialization.Formatters.Binary;
 
-    public partial class product
+    [Serializable]
+    public partial class Product
     {
         public short productID { get; set; }
 

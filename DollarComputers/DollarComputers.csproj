@@ -85,7 +85,7 @@
     <Compile Include="OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\product.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="ProductInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +140,9 @@
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\DollarComputers.exe.config" />
+    <None Include="bin\Debug\DollarComputers.vshost.exe.config" />
+    <None Include="bin\Debug\DollarComputers.vshost.exe.manifest" />
     <None Include="DollarComputersDataSet.xsc">
       <DependentUpon>DollarComputersDataSet.xsd</DependentUpon>
     </None>
@@ -172,7 +175,17 @@
     <None Include="Properties\laptopImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\DollarComputers.exe" />
+    <Content Include="bin\Debug\DollarComputers.pdb" />
+    <Content Include="bin\Debug\DollarComputers.vshost.exe" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
     <Content Include="defaultIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

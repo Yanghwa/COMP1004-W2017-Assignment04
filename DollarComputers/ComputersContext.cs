@@ -12,11 +12,11 @@ namespace DollarComputers
         {
         }
 
-        public virtual DbSet<product> products { get; set; } //Table in the DB
+        public virtual DbSet<Product> products { get; set; } //Table in the DB
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<product>()
+            modelBuilder.Entity<Product>()
                 .Property(e => e.cost)
                 .HasPrecision(19, 4);
         }

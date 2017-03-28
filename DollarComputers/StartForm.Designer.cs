@@ -33,6 +33,7 @@
             this.LoadSavedOrderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.DollorComputersPictureBox = new System.Windows.Forms.PictureBox();
+            this.OpenProductFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DollorComputersPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.LoadSavedOrderButton.TabIndex = 2;
             this.LoadSavedOrderButton.Text = "Load a Saved Order";
             this.LoadSavedOrderButton.UseVisualStyleBackColor = true;
+            this.LoadSavedOrderButton.Click += new System.EventHandler(this.LoadSavedOrderButton_Click);
             // 
             // ExitButton
             // 
@@ -90,7 +92,7 @@
             // StartForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(583, 464);
+            this.ClientSize = new System.Drawing.Size(575, 456);
             this.ControlBox = false;
             this.Controls.Add(this.DollorComputersPictureBox);
             this.Controls.Add(this.ExitButton);
@@ -118,5 +120,6 @@
         private System.Windows.Forms.Button LoadSavedOrderButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.PictureBox DollorComputersPictureBox;
+        private System.Windows.Forms.OpenFileDialog OpenProductFileDialog;
     }
 }

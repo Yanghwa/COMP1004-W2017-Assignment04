@@ -73,6 +73,8 @@
             this.CPUBrandTextBox = new System.Windows.Forms.TextBox();
             this.MemoryLabel = new System.Windows.Forms.Label();
             this.MemoryTextBox = new System.Windows.Forms.TextBox();
+            this.SaveProductFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.OpenProductFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ProductFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -105,21 +107,23 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -594,5 +598,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
         private System.Windows.Forms.TextBox ProductIDTextBox;
+        private System.Windows.Forms.SaveFileDialog SaveProductFileDialog;
+        private System.Windows.Forms.OpenFileDialog OpenProductFileDialog;
     }
 }

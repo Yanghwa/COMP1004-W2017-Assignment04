@@ -13,7 +13,7 @@ namespace DollarComputers
     public partial class OrderForm : Form
     {
         public ProductInfoForm previousForm;
-        private product _selectedRowData;
+        private Product _selectedRowData;
         public OrderForm()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace DollarComputers
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Your Selection-----------------\n" 
+            /*MessageBox.Show("Your Selection-----------------\n" 
                 + "Condition: " + ConditionTextBox.Text + "\n"
                 + "Platform: " + PlatformTextBox.Text + "\n"
                 + "Manufacturer: " + ManufacturerTextBox.Text + "\n"    
@@ -86,7 +86,9 @@ namespace DollarComputers
                 + "Price: " + PriceTextBox.Text + "\n"
                 + "SalesTax: " + SalesTaxTextBox.Text + "\n"
                 + "Total Price: " + TotalTextBox.Text + "\n",
-             "Selected Computer");
+             "Selected Computer");*/
+            MessageBox.Show("Your Selection is being printed now.\n Thank you for using.");
+
         }
 
         private void FinishButton_Click(object sender, EventArgs e)
