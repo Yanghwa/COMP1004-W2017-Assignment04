@@ -43,7 +43,7 @@ namespace DollarComputers
             product.Show();
             product.previousForm = new SelectForm();
             this.Hide();
-            product.openToolStripMenuItem_Click(sender, e);
+            product.ClickOpenToolStripMenuItem(sender, e);
         }
 
     }

@@ -1,4 +1,15 @@
-﻿using System;
+﻿//FileName: ProductInfoForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows information of selected product and save that information as txt file or open txt file to load data
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,28 +28,24 @@ namespace DollarComputers
 {
     public partial class ProductInfoForm : Form
     {
-        private IFormatter objBinaryFormatter = new BinaryFormatter();
+        //PUBLIC CLASS-----------------------
         public SelectForm previousForm;
+        //PRIVATE INSTANCE VARIABLES---------------
+        private IFormatter objBinaryFormatter = new BinaryFormatter();
         private Product _selectedRowData;
         
-        public Product SelectedRowData
-        {
-            get
-            {
-                return _selectedRowData;
-            }
-            set
-            {
-                this._selectedRowData = value;
-            }
-                
-        }
+        //CONSTRUCTORS-----------------------------
         public ProductInfoForm()
         {
             InitializeComponent();
         }
-
-        private void NextButton_Click(object sender, EventArgs e)
+        //EVENT HANDELER --------------------------------
+        /// <summary>
+        /// This method shows Order form when users click the next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickNextButton(object sender, EventArgs e)
         {
             OrderForm order = new OrderForm();
             this.Hide();
@@ -47,18 +54,62 @@ namespace DollarComputers
             order.SettingPictureOnPlatform();
             order.Show();
         }
-
-        private void SelectAnotherProductButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method shows selectForm when users click selectanotherproductbutton or menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickSelectAnotherProduct(object sender, EventArgs e)
         {
             this.Hide();
             previousForm.Show();    
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method terminates app when users click cancel button or menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickCancel(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        /// <summary>
+        /// This method saves information of selected product 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickSaveToolStripMenuItem(object sender, EventArgs e)
+        {
+            DialogResult result;
+            string filename;
+            SaveProductFileDialog.Filter = "Text Files (*.txt)|*.txt|All files (*.*)|*.*";
+            SaveProductFileDialog.FileName = "Product.txt";
+            SaveProductFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            result = SaveProductFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                filename = SaveProductFileDialog.FileName;
+                try
+                {
+                    Stream objStream = new FileStream(filename, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
+                    objBinaryFormatter.Serialize(objStream, _selectedRowData);
+                    objStream.Close();
+                    MessageBox.Show("File Written Successfully", "File Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                    MessageBox.Show("Error Writting File", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        //PUBLIC METHODS------------------------
+        /// <summary>
+        /// 
+        /// </summary>
         public void SettingTextFromData()
         {
             ProductIDTextBox.Text = _selectedRowData.productID.ToString();
@@ -79,36 +130,12 @@ namespace DollarComputers
             WebCamTextBox.Text = _selectedRowData.webcam.ToString();
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult result;
-            string filename;
-            SaveProductFileDialog.Filter = "Text Files (*.txt)|*.txt|All files (*.*)|*.*";
-            SaveProductFileDialog.FileName = "Product.txt";
-            SaveProductFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            result = SaveProductFileDialog.ShowDialog();
-            if(result == DialogResult.OK)
-            {
-                filename = SaveProductFileDialog.FileName;
-                try
-                {
-                    Stream objStream = new FileStream(filename, FileMode.Create,FileAccess.ReadWrite,FileShare.None);
-                    objBinaryFormatter.Serialize(objStream, _selectedRowData);
-                    objStream.Close();
-                    MessageBox.Show("File Written Successfully", "File Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                catch (Exception exception)
-                {
-                    Console.WriteLine(exception.Message);
-                    MessageBox.Show("Error Writting File", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            
-            
-        }
-
-        public void openToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method opens file when users click the open menu or load a saved file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ClickOpenToolStripMenuItem(object sender, EventArgs e)
         {
             try
             {
@@ -135,9 +162,28 @@ namespace DollarComputers
                 MessageBox.Show("Error Reading File", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// This method enables next button when the condition is correct
+        /// </summary>
         public void NextButtonEnable()
         {
             NextButton.Enabled = true;
+        }
+        /// <summary>
+        /// this method is setter and getter for _selectedRowData
+        /// </summary>
+        public Product SelectedRowData
+        {
+            get
+            {
+                return _selectedRowData;
+            }
+            set
+            {
+                this._selectedRowData = value;
+            }
+
         }
     }
 }

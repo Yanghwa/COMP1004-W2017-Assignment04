@@ -109,7 +109,7 @@
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.openToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.ClickOpenToolStripMenuItem);
             // 
             // saveToolStripMenuItem
             // 
@@ -117,7 +117,7 @@
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.saveToolStripMenuItem.Text = "&Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this._clickSaveToolStripMenuItem);
             // 
             // exitToolStripMenuItem
             // 
@@ -125,7 +125,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this._clickCancel);
             // 
             // editToolStripMenuItem
             // 
@@ -142,7 +142,7 @@
             this.selectAnotherProductToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(333, 30);
             this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
-            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this._clickSelectAnotherProduct);
             // 
             // NextButton
             // 
@@ -153,7 +153,7 @@
             this.NextButton.TabIndex = 5;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.Click += new System.EventHandler(this._clickNextButton);
             // 
             // CancelButton
             // 
@@ -163,7 +163,7 @@
             this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this._clickCancel);
             // 
             // SelectAnotherProductButton
             // 
@@ -173,7 +173,7 @@
             this.SelectAnotherProductButton.TabIndex = 7;
             this.SelectAnotherProductButton.Text = "Select Another Product";
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
-            this.SelectAnotherProductButton.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
+            this.SelectAnotherProductButton.Click += new System.EventHandler(this._clickSelectAnotherProduct);
             // 
             // ConfirmLabel
             // 
