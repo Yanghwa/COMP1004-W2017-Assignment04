@@ -238,6 +238,7 @@
             // 
             this.OSTextBox.Location = new System.Drawing.Point(126, 523);
             this.OSTextBox.Name = "OSTextBox";
+            this.OSTextBox.ReadOnly = true;
             this.OSTextBox.Size = new System.Drawing.Size(234, 26);
             this.OSTextBox.TabIndex = 38;
             // 
@@ -431,7 +432,7 @@
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
-            this.PlatformLabel.Location = new System.Drawing.Point(220, 41);
+            this.PlatformLabel.Location = new System.Drawing.Point(223, 41);
             this.PlatformLabel.Name = "PlatformLabel";
             this.PlatformLabel.Size = new System.Drawing.Size(68, 20);
             this.PlatformLabel.TabIndex = 13;
@@ -540,6 +541,7 @@
             this.ComputerPictureBox.Location = new System.Drawing.Point(456, 45);
             this.ComputerPictureBox.Name = "ComputerPictureBox";
             this.ComputerPictureBox.Size = new System.Drawing.Size(235, 173);
+            this.ComputerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ComputerPictureBox.TabIndex = 10;
             this.ComputerPictureBox.TabStop = false;
             // 

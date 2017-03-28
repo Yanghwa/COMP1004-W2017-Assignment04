@@ -39,33 +39,11 @@ namespace DollarComputers
 
         private void LoadSavedOrderButton_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                ProductInfoForm product = new ProductInfoForm();
-                string filename;
-                DialogResult result;
-                OpenProductFileDialog.Filter = "Text Files (*.txt)|*.txt|All files (*.*)|*.*";
-                OpenProductFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-                result = OpenProductFileDialog.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    filename = OpenProductFileDialog.FileName;
-                    Stream objStreamDeSerialize = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read);
-                    product.SelectedRowData = (Product)objBinaryFormatter.Deserialize(objStreamDeSerialize);
-                    product.SettingTextFromData();
-                    //    MessageBox.Show("File Empty - No data to Read", "Error Reading File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Close();
-                    product.Show();
-                    //this._reader.Close();   //flushes the buffer and read the files
-                }
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-                MessageBox.Show("Error Reading File", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            ProductInfoForm product = new ProductInfoForm();
+            product.Show();
+            product.previousForm = new SelectForm();
+            this.Hide();
+            product.openToolStripMenuItem_Click(sender, e);
         }
 
     }

@@ -62,6 +62,7 @@ namespace DollarComputers
         private void NextButton_Click(object sender, EventArgs e)
         {
             ProductInfoForm productInfo = new ProductInfoForm();
+            productInfo.NextButtonEnable();
             this.Hide();
             productInfo.previousForm = this;
             productInfo.SelectedRowData = this.SelectedRow;

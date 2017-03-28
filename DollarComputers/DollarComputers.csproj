@@ -183,6 +183,9 @@
     <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
     <Content Include="bin\Debug\EntityFramework.xml" />
     <Content Include="defaultIcon.ico" />
+    <None Include="Properties\laptop.jpg" />
+    <None Include="Properties\desktop.jpg" />
+    <None Include="Properties\defaultComputer.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

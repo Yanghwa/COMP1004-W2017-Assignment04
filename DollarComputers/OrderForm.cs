@@ -27,7 +27,7 @@ namespace DollarComputers
         public void BringDataFromProductInfoForm()
         {
             _selectedRowData = previousForm.SelectedRowData;
-            PriceTextBox.Text = _selectedRowData.cost.ToString();
+            PriceTextBox.Text = "$" + string.Format("{0:#,##0.00}", _selectedRowData.cost);
             ManufacturerTextBox.Text = _selectedRowData.manufacturer.ToString();
             ModelTextBox.Text = _selectedRowData.model.ToString();
             MemoryTextBox.Text = _selectedRowData.RAM_size.ToString();
@@ -50,8 +50,8 @@ namespace DollarComputers
             decimal price = (decimal)_selectedRowData.cost;
             decimal salesTax = price * (decimal)0.13;
             decimal total = price + salesTax;
-            SalesTaxTextBox.Text = salesTax.ToString();
-            TotalTextBox.Text = total.ToString();
+            SalesTaxTextBox.Text = "$" + string.Format("{0:#,##0.00}", salesTax);
+            TotalTextBox.Text = "$" + string.Format("{0:#,##0.00}", total);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -99,8 +99,21 @@ namespace DollarComputers
             {
                 Application.Exit();
             }
-
-
+        }
+        public void SettingPictureOnPlatform()
+        {
+            switch(_selectedRowData.platform)
+            {
+                case "Laptop":
+                    ComputerPictureBox.Image = Properties.Resources.laptop;
+                    break;
+                case "Desktop PC":
+                    ComputerPictureBox.Image = Properties.Resources.desktop;
+                    break;
+                default:
+                    ComputerPictureBox.Image = Properties.Resources.defaultComputer;
+                    break;
+            }
         }
     }
 }

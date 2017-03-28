@@ -44,23 +44,14 @@ namespace DollarComputers
             this.Hide();
             order.previousForm = this;
             order.BringDataFromProductInfoForm();
+            order.SettingPictureOnPlatform();
             order.Show();
         }
 
         private void SelectAnotherProductButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (previousForm != null)
-            {
-                previousForm.Show();
-            } 
-            else
-            {
-                this.Close();
-                StartForm start = new StartForm();
-                start.Show();
-            }
-                
+            previousForm.Show();    
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -71,7 +62,7 @@ namespace DollarComputers
         public void SettingTextFromData()
         {
             ProductIDTextBox.Text = _selectedRowData.productID.ToString();
-            CostTextBox.Text = _selectedRowData.cost.ToString();
+            CostTextBox.Text = "$" + string.Format("{0:#,##0.00}", _selectedRowData.cost);
             ManufacturerTextBox.Text = _selectedRowData.manufacturer.ToString();
             ModelTextBox.Text = _selectedRowData.model.ToString();
             MemoryTextBox.Text = _selectedRowData.RAM_size.ToString();
@@ -117,13 +108,14 @@ namespace DollarComputers
             
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 string filename;
                 DialogResult result;
                 OpenProductFileDialog.Filter = "Text Files (*.txt)|*.txt|All files (*.*)|*.*";
+                OpenProductFileDialog.FileName = "";
                 OpenProductFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
                 result = OpenProductFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
@@ -133,7 +125,7 @@ namespace DollarComputers
                     _selectedRowData = (Product)objBinaryFormatter.Deserialize(objStreamDeSerialize);
                     SettingTextFromData();
                     //    MessageBox.Show("File Empty - No data to Read", "Error Reading File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
+                    NextButtonEnable();
                     //this._reader.Close();   //flushes the buffer and read the files
                 }
             }
@@ -142,7 +134,10 @@ namespace DollarComputers
                 Console.WriteLine(exception.Message);
                 MessageBox.Show("Error Reading File", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        public void NextButtonEnable()
+        {
+            NextButton.Enabled = true;
         }
     }
 }
