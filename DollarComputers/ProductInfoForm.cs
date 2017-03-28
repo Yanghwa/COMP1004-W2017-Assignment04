@@ -31,7 +31,7 @@ namespace DollarComputers
         //PUBLIC CLASS-----------------------
         public SelectForm previousForm;
         //PRIVATE INSTANCE VARIABLES---------------
-        private IFormatter objBinaryFormatter = new BinaryFormatter();
+        private IFormatter _objBinaryFormatter = new BinaryFormatter();
         private Product _selectedRowData;
         
         //CONSTRUCTORS-----------------------------
@@ -93,7 +93,7 @@ namespace DollarComputers
                 try
                 {
                     Stream objStream = new FileStream(filename, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
-                    objBinaryFormatter.Serialize(objStream, _selectedRowData);
+                    _objBinaryFormatter.Serialize(objStream, _selectedRowData);
                     objStream.Close();
                     MessageBox.Show("File Written Successfully", "File Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -149,7 +149,7 @@ namespace DollarComputers
                 {
                     filename = OpenProductFileDialog.FileName;
                     Stream objStreamDeSerialize = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read);
-                    _selectedRowData = (Product)objBinaryFormatter.Deserialize(objStreamDeSerialize);
+                    _selectedRowData = (Product)_objBinaryFormatter.Deserialize(objStreamDeSerialize);
                     SettingTextFromData();
                     //    MessageBox.Show("File Empty - No data to Read", "Error Reading File", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     NextButtonEnable();

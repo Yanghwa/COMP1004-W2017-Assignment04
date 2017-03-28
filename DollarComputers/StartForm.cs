@@ -1,4 +1,15 @@
-﻿using System;
+﻿//FileName: StartForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows selection users can choose load files or select from db to select product
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +27,23 @@ namespace DollarComputers
 {
     public partial class StartForm : Form
     {
-        private IFormatter objBinaryFormatter = new BinaryFormatter();
+        //PRIVATE INSTANCE VARIABLES---------------
+        private IFormatter _objBinaryFormatter = new BinaryFormatter();
         private Product _product;
+        
+        //CONSTRUTORS-------------
         public StartForm()
         {
             InitializeComponent();
             this._product = new Product();
         }
-
-        private void StartNewOrderButton_Click(object sender, EventArgs e)
+        //EVENT HANDLERS-------------------------
+        /// <summary>
+        /// this method helps users can select product from db
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickStartNewOrderButton(object sender, EventArgs e)
         {
             SelectForm select = new SelectForm();
             this.Hide();
@@ -32,12 +51,22 @@ namespace DollarComputers
 
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method terminates app when users click exit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickExitButton(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void LoadSavedOrderButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method opens files to get data from file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _clickLoadSavedOrderButton(object sender, EventArgs e)
         {
             ProductInfoForm product = new ProductInfoForm();
             product.Show();

@@ -1,4 +1,15 @@
-﻿using System;
+﻿//FileName: SplashScreen.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows logo of dollar computers for 3.1 seconds
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +23,13 @@ namespace DollarComputers
 {
     public partial class SplashScreen : Form
     {
+        //CONSTRUTORS-----------------
         public SplashScreen()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// this method setting time and hide splashscreen and show start form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

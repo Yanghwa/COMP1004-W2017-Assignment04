@@ -55,7 +55,7 @@
             this.StartNewOrderButton.TabIndex = 1;
             this.StartNewOrderButton.Text = "Start a New Order";
             this.StartNewOrderButton.UseVisualStyleBackColor = true;
-            this.StartNewOrderButton.Click += new System.EventHandler(this.StartNewOrderButton_Click);
+            this.StartNewOrderButton.Click += new System.EventHandler(this._clickStartNewOrderButton);
             // 
             // LoadSavedOrderButton
             // 
@@ -66,7 +66,7 @@
             this.LoadSavedOrderButton.TabIndex = 2;
             this.LoadSavedOrderButton.Text = "Load a Saved Order";
             this.LoadSavedOrderButton.UseVisualStyleBackColor = true;
-            this.LoadSavedOrderButton.Click += new System.EventHandler(this.LoadSavedOrderButton_Click);
+            this.LoadSavedOrderButton.Click += new System.EventHandler(this._clickLoadSavedOrderButton);
             // 
             // ExitButton
             // 
@@ -77,7 +77,7 @@
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Exit the Program";
             this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.ExitButton.Click += new System.EventHandler(this._clickExitButton);
             // 
             // DollorComputersPictureBox
             // 
