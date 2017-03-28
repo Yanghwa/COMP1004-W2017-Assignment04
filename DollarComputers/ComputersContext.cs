@@ -1,3 +1,15 @@
+//FileName: ComputersContext.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app uses Entity framework and connects to db 
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
+
 namespace DollarComputers
 {
     using System;

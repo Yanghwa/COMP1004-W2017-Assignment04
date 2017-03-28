@@ -1,3 +1,14 @@
+//FileName: Product.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app defines Product object format brought from db to save data as object using entity framework
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
 namespace DollarComputers
 {
     using System;
@@ -9,6 +20,7 @@ namespace DollarComputers
     using System.IO;
     using System.Runtime.Serialization.Formatters.Binary;
 
+    //to save as a file, whole object is serialized and deserialized
     [Serializable]
     public partial class Product
     {

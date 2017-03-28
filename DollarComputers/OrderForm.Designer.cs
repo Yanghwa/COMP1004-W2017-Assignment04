@@ -91,7 +91,7 @@
             this.BackButton.TabIndex = 7;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.Click += new System.EventHandler(this._clickBackButton);
             // 
             // CancelButton
             // 
@@ -101,7 +101,7 @@
             this.CancelButton.TabIndex = 8;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this._clickCancelButton);
             // 
             // FinishButton
             // 
@@ -111,7 +111,7 @@
             this.FinishButton.TabIndex = 9;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
-            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
+            this.FinishButton.Click += new System.EventHandler(this._clickFinishButton);
             // 
             // YourPriceGroupBox
             // 
@@ -492,7 +492,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this._clickPrintToolStripMenuItem);
             // 
             // exitToolStripMenuItem
             // 
@@ -500,7 +500,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this._clickCancelButton);
             // 
             // editToolStripMenuItem
             // 
@@ -517,7 +517,7 @@
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
             this.backToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.backToolStripMenuItem.Text = "&Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
+            this.backToolStripMenuItem.Click += new System.EventHandler(this._clickBackButton);
             // 
             // helpToolStripMenuItem
             // 
@@ -534,7 +534,7 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._clickAboutToolStripMenuItem);
             // 
             // ComputerPictureBox
             // 

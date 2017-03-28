@@ -1,4 +1,15 @@
-﻿using System;
+﻿//FileName: AboutBox.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 07/03/2017
+//Copy Rights: Junghwan Yang
+//Description: This app shows auther's information and app's information
+//  
+
+/////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
